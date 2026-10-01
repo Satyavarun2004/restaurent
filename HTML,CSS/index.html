@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoria Restaurant | Delicious Food & Fine Dining</title>
+    
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Restaurant Logo -->
+            <a href="#home" class="logo">
+                <span class="logo-title">SAVORIA</span>
+                <span class="logo-tag">RESTAURANT</span>
+            </a>
+
+            <!-- Mobile Navigation Toggle Checkbox -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars icon-open"></i>
+                <i class="fa-solid fa-xmark icon-close"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#reservation" class="nav-link">Reservation</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#reservation" class="btn btn-primary nav-btn">Book a Table</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HOME (HERO) SECTION ==================== -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="sub-badge"><i class="fa-solid fa-utensils"></i> Welcome to Savoria</span>
+                <h1 class="hero-title">Experience Fresh & Authentic Taste</h1>
+                <p class="hero-description">Enjoy delicious gourmet meals prepared with fresh local ingredients, passionate chefs, and a warm cozy ambience.</p>
+                <div class="hero-actions">
+                    <a href="#reservation" class="btn btn-primary btn-lg">Book a Table</a>
+                    <a href="#menu" class="btn btn-outline btn-lg">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="grid grid-2 about-grid">
+                <!-- About Left Image -->
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Restaurant Interior" class="about-img-main">
+                    <div class="about-badge">
+                        <span class="badge-years">5+</span>
+                        <span class="badge-text">Years Quality Service</span>
+                    </div>
+                </div>
+                
+                <!-- About Right Content -->
+                <div class="about-content">
+                    <div class="section-header align-left">
+                        <span class="section-subtitle">OUR STORY</span>
+                        <h2 class="section-title">Serving Delicious Meals With Passion</h2>
+                    </div>
+                    <p class="about-text">
+                        Located in the heart of Madhapur, Savoria Restaurant brings high-quality dishes, friendly hospitality, and an unforgettable dining vibe for families, friends, and food lovers.
+                    </p>
+                    <p class="about-text">
+                        From traditional starters to savory main courses and irresistible desserts, every item on our menu is cooked fresh to order with authentic spices and fresh ingredients.
+                    </p>
+                    
+                    <!-- Highlights -->
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-seedling feature-icon"></i>
+                            <div>
+                                <h4>100% Fresh Ingredients</h4>
+                                <p>Sourced daily from verified local markets.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-user-chef feature-icon"></i>
+                            <div>
+                                <h4>Expert Chefs</h4>
+                                <p>Crafting mouthwatering food every day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MENU SECTION ==================== -->
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">FOOD MENU</span>
+                <h2 class="section-title">Our Special Dishes</h2>
+                <p class="section-description">Choose from our wide variety of Starters, Main Courses, Desserts, and Drinks.</p>
+            </div>
+
+            <!-- Category 1: Starters -->
+            <div class="menu-category">
+                <h3 class="category-header"><i class="fa-solid fa-bowl-food"></i> Starters</h3>
+                <div class="grid grid-2 menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Crispy Paneer Tikka</h4>
+                            <span class="menu-item-price">₹280</span>
+                        </div>
+                        <p class="menu-item-desc">Marinated cottage cheese grilled in a clay oven with spices and green chutney.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Chicken 65</h4>
+                            <span class="menu-item-price">₹320</span>
+                        </div>
+                        <p class="menu-item-desc">Spicy deep-fried chicken tossed with curry leaves, chili, and yogurt garlic sauce.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Garlic Butter Mushrooms</h4>
+                            <span class="menu-item-price">₹250</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh button mushrooms sautéed in garlic, butter, and herbs.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Veg Spring Rolls</h4>
+                            <span class="menu-item-price">₹220</span>
+                        </div>
+                        <p class="menu-item-desc">Crispy rolls stuffed with seasoned shredded vegetables and sweet chili sauce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Main Course -->
+            <div class="menu-category">
+                <h3 class="category-header"><i class="fa-solid fa-drumstick-bite"></i> Main Course</h3>
+                <div class="grid grid-2 menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Hyderabadi Chicken Biryani</h4>
+                            <span class="menu-item-price">₹380</span>
+                        </div>
+                        <p class="menu-item-desc">Aromatic basmati rice cooked with succulent chicken pieces and traditional spices.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Paneer Butter Masala</h4>
+                            <span class="menu-item-price">₹310</span>
+                        </div>
+                        <p class="menu-item-desc">Soft paneer cubes cooked in rich, creamy tomato gravy with butter and spices.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Butter Naan & Dal Makhani</h4>
+                            <span class="menu-item-price">₹260</span>
+                        </div>
+                        <p class="menu-item-desc">Slow-cooked black lentils in creamy butter gravy served with fluffy butter naan.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Grilled Salmon Steak</h4>
+                            <span class="menu-item-price">₹550</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh salmon fillet grilled with lemon herb butter sauce and roasted vegetables.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Desserts -->
+            <div class="menu-category">
+                <h3 class="category-header"><i class="fa-solid fa-cake-candles"></i> Desserts</h3>
+                <div class="grid grid-2 menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Gulab Jamun with Ice Cream</h4>
+                            <span class="menu-item-price">₹140</span>
+                        </div>
+                        <p class="menu-item-desc">Warm sugar syrup milk dumplings served with rich vanilla ice cream scoop.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Chocolate Sizzler Brownie</h4>
+                            <span class="menu-item-price">₹210</span>
+                        </div>
+                        <p class="menu-item-desc">Hot chocolate brownie on a sizzling plate topped with chocolate syrup and vanilla ice cream.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Drinks -->
+            <div class="menu-category">
+                <h3 class="category-header"><i class="fa-solid fa-glass-water"></i> Drinks & Beverages</h3>
+                <div class="grid grid-2 menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Fresh Mango Lassi</h4>
+                            <span class="menu-item-price">₹110</span>
+                        </div>
+                        <p class="menu-item-desc">Chilled sweet yogurt drink blended with fresh mango pulp.</p>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-header">
+                            <h4 class="menu-item-name">Virgin Mojito</h4>
+                            <span class="menu-item-price">₹130</span>
+                        </div>
+                        <p class="menu-item-desc">Refreshing soda drink infused with crushed mint leaves, lemon, and ice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">PHOTOS</span>
+                <h2 class="section-title">Our Food & Ambience Gallery</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Delicious Food" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Delicious Main Course</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Dining" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Cozy Dining Space</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Dessert Plate" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Tasty Desserts</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Special Dishes" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Fresh Pizzas & Starters</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Drinks Bar" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Refreshing Mocktails</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Beverages" class="gallery-img">
+                    <div class="gallery-overlay"><span class="gallery-caption">Special Drinks</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RESERVATION SECTION ==================== -->
+    <section id="reservation" class="section reservation-section">
+        <div class="container">
+            <div class="reservation-box">
+                <div class="section-header center">
+                    <span class="section-subtitle">BOOK A TABLE</span>
+                    <h2 class="section-title">Online Table Reservation</h2>
+                    <p class="section-description">Fill out the form below to book a table for your family or friends.</p>
+                </div>
+
+                <!-- Reservation Form -->
+                <form class="reservation-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Reservation submitted successfully! We will contact you soon.');">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="res-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input type="text" id="res-name" name="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="res-phone" name="phone" class="form-control" placeholder="1234567890" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-date"><i class="fa-solid fa-calendar"></i> Date</label>
+                            <input type="date" id="res-date" name="date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-time"><i class="fa-solid fa-clock"></i> Time</label>
+                            <input type="time" id="res-time" name="time" class="form-control" required>
+                        </div>
+
+                        <div class="form-group form-full">
+                            <label for="res-guests"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                            <select id="res-guests" name="guests" class="form-control" required>
+                                <option value="" disabled selected>Select guests count</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="4">3 to 4 People</option>
+                                <option value="6">5 to 6 People</option>
+                                <option value="8+">8+ People (Group/Party)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-full">
+                            <label for="res-notes"><i class="fa-solid fa-comment-dots"></i> Special Notes</label>
+                            <textarea id="res-notes" name="notes" rows="3" class="form-control" placeholder="Any dietary preferences or seating requests..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-check"></i> Submit Reservation
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">GET IN TOUCH</span>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+
+            <div class="grid grid-2 contact-grid">
+                <!-- Contact Details -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Address</h4>
+                            <p>Madhapur, Hyderabad, Telangana</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Phone Number</h4>
+                            <p>1234567890</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Email Address</h4>
+                            <p>restaurent@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Opening Hours</h4>
+                            <p>Monday - Sunday: 11:00 AM – 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed (Madhapur Location) -->
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.299863483984!2d78.38461737493608!3d17.445281483452668!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158f201b205%3A0x11bbe7be7792411b!2sMadhapur%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Madhapur Location Map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo footer-logo">
+                        <span class="logo-title">SAVORIA</span>
+                        <span class="logo-tag">RESTAURANT</span>
+                    </a>
+                    <p class="footer-about">
+                        Serving great food with love and quality in Madhapur. Visit us with your family & friends!
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <p class="footer-text"><i class="fa-solid fa-location-dot"></i> Madhapur, Hyderabad</p>
+                    <p class="footer-text"><i class="fa-solid fa-phone"></i> 1234567890</p>
+                    <p class="footer-text"><i class="fa-solid fa-envelope"></i> restaurent@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Savoria Restaurant. All Rights Reserved. Built with HTML & CSS.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

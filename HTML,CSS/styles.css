@@ -1,0 +1,737 @@
+/* ==========================================================================
+   SAVORIA RESTAURANT - STYLESHEET (HTML & CSS ONLY)
+   Fresher Friendly, Clean & Structured Project Code
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES (Color Scheme & Fonts)
+   -------------------------------------------------------------------------- */
+:root {
+    --primary-color: #d4af37;       /* Theme Gold Accent */
+    --primary-hover: #b8952b;       /* Darker Gold Hover */
+    --bg-dark: #181818;            /* Navbar & Dark Background */
+    --bg-light: #ffffff;           /* Clean White Background */
+    --bg-section: #f9f6f0;         /* Soft Cream Section Background */
+    --text-dark: #222222;          /* Primary Text */
+    --text-muted: #666666;         /* Secondary Text */
+    --text-light: #ffffff;         /* White Text */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    --border-light: #e5ded4;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. BASIC RESET & GLOBAL STYLES
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT CONTAINER & UTILITIES
+   -------------------------------------------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Section Header Titles */
+.section-header {
+    margin-bottom: 45px;
+}
+
+.section-header.center {
+    text-align: center;
+}
+
+.section-header.align-left {
+    text-align: left;
+}
+
+.section-subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 2.3rem;
+    margin: 8px 0 12px;
+}
+
+.section-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 26px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-lg {
+    padding: 14px 32px;
+    font-size: 1rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION BAR
+   -------------------------------------------------------------------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-dark);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+.logo-tag {
+    font-size: 0.65rem;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-toggle-input {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-toggle-label .icon-close {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. HOME (HERO) SECTION
+   -------------------------------------------------------------------------- */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    min-height: 550px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    color: var(--text-light);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.sub-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   6. ABOUT SECTION
+   -------------------------------------------------------------------------- */
+.about-section {
+    background-color: var(--bg-light);
+}
+
+.about-grid {
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-img-main {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+}
+
+.about-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 25px;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.badge-years {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+}
+
+.badge-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.about-text {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.feature-icon {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background-color: rgba(212, 175, 55, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.feature-item h4 {
+    font-size: 0.95rem;
+}
+
+.feature-item p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. MENU SECTION
+   -------------------------------------------------------------------------- */
+.menu-section {
+    background-color: var(--bg-section);
+}
+
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.category-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-header i {
+    color: var(--primary-color);
+}
+
+.menu-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.menu-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-item-name {
+    font-size: 1.1rem;
+}
+
+.menu-item-price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.menu-item-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   8. GALLERY SECTION
+   -------------------------------------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 240px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-caption {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   9. RESERVATION SECTION
+   -------------------------------------------------------------------------- */
+.reservation-section {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.reservation-section .section-title,
+.reservation-section .section-description {
+    color: var(--text-light);
+}
+
+.reservation-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reservation-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-full {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+}
+
+select.form-control option {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   10. CONTACT SECTION & GOOGLE MAP
+   -------------------------------------------------------------------------- */
+.contact-section {
+    background-color: var(--bg-section);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(212, 175, 55, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.info-details h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.info-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.map-wrapper {
+    width: 100%;
+    min-height: 320px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 2px solid #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   11. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.footer-about {
+    font-size: 0.85rem;
+    margin: 12px 0 18px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-heading {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-text {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        display: none;
+    }
+
+    .nav-toggle-input:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-toggle-input:checked ~ .nav-toggle-label .icon-open {
+        display: none;
+    }
+
+    .nav-toggle-input:checked ~ .nav-toggle-label .icon-close {
+        display: block;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: span 1;
+    }
+}
